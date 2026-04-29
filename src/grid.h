@@ -1,4 +1,4 @@
-#pragma once // ?? duplicate
+#pragma once 
 #include <vector>
 #include <raylib.h>
 using namespace std;
@@ -9,12 +9,11 @@ public:
     Grid();
     void Initialize();
     void Print();
+    void Draw();
     int grid[20][10];
-
 
 private:
     // Color is <r,g,b,a> 
-    vector<Color> GetCellColors;
     int numRows;
     int numCols;
     int cellSize;

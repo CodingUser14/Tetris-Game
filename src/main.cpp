@@ -1,5 +1,6 @@
 #include <raylib.h>
 #include "grid.h"
+#include "blocks.cpp"
 /*
 Tetris Game 
 // stuct Color = {red, green, blue, alpha}
@@ -14,14 +15,16 @@ int main()
 
     Grid grid = Grid(); // Initialize object grid with the default constructor 
     grid.Print();
+    LBlock block = LBlock();
+
 
     while(WindowShouldClose() == false)
     {
         BeginDrawing();
         ClearBackground(darkBlue); // clear screen for new frame
-
+        grid.Draw();
+        block.Draw();
         EndDrawing();
     }
-
     CloseWindow();
 }
